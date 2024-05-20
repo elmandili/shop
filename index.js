@@ -13,7 +13,7 @@ if(process.env.NODE_ENV !== "production")
   }
 
 const app = express();
-const port = process.env.PORT || 3000; // Use environment variable or default port
+const port = process.env.PORT; // Use environment variable or default port
 
 // Parse incoming data (optional, for future use)
 app.use(bodyParser.json());
