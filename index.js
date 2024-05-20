@@ -143,6 +143,7 @@ app.get('/api/search/:product_name', async(req,res) =>{
 app.listen(port, ()=>{
     console.log("port is running");
     console.log(`Example app listening on port ${port}`);
+    //
 })
 
 
