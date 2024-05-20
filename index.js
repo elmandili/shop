@@ -50,7 +50,17 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: 'https://shop-6zpi.onrender.com',
+    optionsSuccessStatus: 200
+  }
+));
+
+
+
+
+
 app.use(express.static('browser'));
 
 app.get("/data", async (req,res)=>{
