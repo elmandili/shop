@@ -22,8 +22,8 @@ app.use(bodyParser.json());
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
-
-    
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
     strict: true,
     deprecationErrors: true,
   }
