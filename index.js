@@ -50,12 +50,7 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.use(cors(
-  {
-    origin: 'https://shop-6zpi.onrender.com',
-    optionsSuccessStatus: 200
-  }
-));
+app.use(cors());
 
 //new modification
 
