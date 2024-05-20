@@ -1,6 +1,6 @@
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://elmandilimail:elmandili2004@cluster0.ilqpr9n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "MISU9OaJXaUO0QUKSflDbmedCvCrw2SM4zZEw55UuNQ1gkjaLnQERAixkewzfAqs";
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
