@@ -143,7 +143,7 @@ app.get('/api/search/:product_name', async(req,res) =>{
   }
 })
 
-app.listen(port, ()=>{
+app.listen(4040, ()=>{
     console.log("port is running");
 })
 
