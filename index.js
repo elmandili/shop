@@ -29,6 +29,8 @@ const client = new MongoClient(uri, {
   }
 });
 
+//try
+
 const db = client.db("products");
 
 const collection = db.collection("productsCollection");
