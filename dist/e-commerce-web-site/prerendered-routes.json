@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/categories",
+    "/login",
+    "/orders",
+    "/products",
+    "/shop",
+    "/shop/landing-products"
+  ]
+}
