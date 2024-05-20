@@ -30,6 +30,7 @@ const client = new MongoClient(uri, {
 });
 
 const db = client.db("products");
+
 const collection = db.collection("productsCollection");
 const orders = db.collection("orders");
 
@@ -132,7 +133,7 @@ app.get('/api/search/:product_name', async(req,res) =>{
   }
 })
 
-app.listen(4040, ()=>{
+app.listen(port, ()=>{
     console.log("port is running");
 })
 
