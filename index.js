@@ -45,11 +45,7 @@ async function run() {
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
-    registeredUsers.insertOne({
-      username: '',
-      email: '',
-      password: ''
-    })
+    
 
     //deploy
   } finally {
@@ -91,8 +87,9 @@ app.post('/api/place-order', async(req, res) => {
   res.json("order placed");
 })
 
-app.post('/api/register', async(req, res)=>{
+app.post('/api/register', async(req, res)=> {
   const result = await registeredUsers.insertOne(req.body);
+  res.send("sent for review");
 })
 
 app.get('/api/get-orders', async(req, res) => {
