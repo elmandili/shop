@@ -35,6 +35,7 @@ const db = client.db("products");
 
 const collection = db.collection("productsCollection");
 const orders = db.collection("orders");
+const registeredUsers = db.collection("registeredUsers");
 
 async function run() {
   try {
@@ -80,6 +81,10 @@ app.post('/api/add-product', async(req,res)=>{
 app.post('/api/place-order', async(req, res) => {
   const result = await orders.insertOne(req.body);
   res.json("order placed");
+})
+
+app.post('/api/register', async(req, res)=>{
+  const result = await registeredUsers.insertOne(req.body);
 })
 
 app.get('/api/get-orders', async(req, res) => {
