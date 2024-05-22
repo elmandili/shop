@@ -137,7 +137,8 @@ app.get('/api/find-user/:username', async(req, res)=>{
   try
   {
     const document = await registeredUsers.findOne({"email" : req.params.username});
-    await res.send(document);
+    console.log(document);
+    await res.send(document.toArray());
   }
   catch
   {
