@@ -157,7 +157,7 @@ app.get('/api/search/:product_name', async(req,res) =>{
     const document = await orders.find({"name" : req.params.product_name}).toArray();
     console.log(req.params.product_name)
     console.log(document);
-    await res.json.send(document);
+    await res.send(document);
 
     //merge test
   }
