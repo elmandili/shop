@@ -139,7 +139,7 @@ app.get('/api/find-user/:username', async(req, res)=>{
     const document = await registeredUsers.find({"email" : req.params.username});
     console.log(document);
     
-    await res.json(document);
+    await res.send(document);
   }
   catch
   {
@@ -154,7 +154,7 @@ app.get('/api/search/:product_name', async(req,res) =>{
       name: req.params.product_name
     }
     const name = req.params.product_name;
-    const document = await orders.find({"name" : req.params.product_name});
+    const document = await orders.find({"name" : req.params.product_name}).toArray() ;
     console.log(req.params.product_name)
     console.log(document);
     await res.send(document);
