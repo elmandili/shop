@@ -149,7 +149,6 @@ app.get('/api/find-user/:username', async(req, res)=>{
 app.get('/api/search/:product_name', async(req,res) =>{
   try
   {
-    console.log(req.user._id);
     obj =
     {
       name: req.params.product_name
