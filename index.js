@@ -90,7 +90,7 @@ app.post('/api/place-order', async(req, res) => {
 
 app.post('/api/register', async(req, res)=> {
   const result = await registeredUsers.insertOne(req.body);
-  res.send("sent for review");
+  res.json.send("sent for review");
 })
 
 app.get('/api/get-orders', async(req, res) => {
