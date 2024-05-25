@@ -124,7 +124,8 @@ app.get('/api/find/:id', async(req,res)=>{
   try
   {
     const document = await collection.findOne({_id: new mongodb.ObjectId(req.params.id)});
-    await res.send(document);
+    await res.json(document);
+    
   }
   catch
   {
@@ -137,11 +138,11 @@ app.get('/api/find/:id', async(req,res)=>{
 app.get('/api/find-user/:username', async(req, res)=>{
   try
   {
-    const document = await registeredUsers.find({"email" : req.params.username});
+    const document = await registeredUsers.find({"email" : req.params.username}).toArray() ;
     console.log(document);
     
     await res.json(document);
-    //commit
+    console.log("this is the json document : " + JSON.stringify(document)  );
   }
   catch
   {
