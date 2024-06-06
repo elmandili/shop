@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const multer = require('multer');
 const mongodb = require('mongodb');
+const crypto_var = require('crypto-js');
+
 
 if(process.env.NODE_ENV !== "production")
   {
@@ -133,6 +135,14 @@ app.get('/api/find/:id', async(req,res)=>{
   }
 })
 
+app.get('/api/update/order-comments/:id/:comments/:statue', (req,res)=>{
+  let new_comments = JSON.parse(req.params.comments);
+  
+  orders.updateOne({_id: new mongodb.ObjectId(req.params.id)},{ $set: {comments: new_comments}});
+  orders.updateOne({_id: new mongodb.ObjectId(req.params.id)},{ $set: {statue: req.params.statue}});
+  res.json('comments : ' + req.params.comments + ' id : ' + req.params.id);
+})
+
 //commit deploy
 
 app.get('/api/find-user/:username', async(req, res)=>{
@@ -149,6 +159,7 @@ app.get('/api/find-user/:username', async(req, res)=>{
 
   }
 })
+
 app.get('/api/search/:product_name', async(req,res) =>{
   try
   {
@@ -170,11 +181,63 @@ app.get('/api/search/:product_name', async(req,res) =>{
   }
 })
 
+app.get('/api/regex/:reg', async (req,res) =>{
+  let cursor = "";
+  let document = "";
+  console.log(req.params.reg)
+  if(req.params.reg != "null")
+    {
+      cursor = collection.find({productName: { $regex: req.params.reg, $options:'i'}});
+      document = await cursor.toArray();
+    }
+  else
+    {
+      cursor = collection.find();
+      document = await cursor.toArray();
+    }
+  res.json(document);
+})
+
+app.get('/api/encrypt/:data', async(req,res)=>
+{
+  const x = crypto_var.AES.encrypt(req.params.data, 'key');
+  const xx = crypto_var.enc.Base64.stringify(crypto_var.enc.Utf8.parse(x));
+  res.json(xx); 
+  
+})
+
+app.get('/api/decrypt/:data', async(req,res)=>{
+  const x = crypto_var.enc.Base64.parse(req.params.data).toString(crypto_var.enc.Utf8);
+  const bytes = crypto_var.AES.decrypt(x, 'key');
+  const respone = bytes.toString(crypto_var.enc.Utf8) ;
+  
+  await res.json(respone);
+  res.send(respone);
+})
+
 app.listen(port, ()=>{
     console.log("port is running");
     console.log(`Example app listening on port ${port}`);
     //
 })
+
+app.get('/api/user-orders/:id', async(req, res)=>{
+  const document = await orders.find({ user_id : req.params.id}).toArray();
+  res.send(JSON.stringify(document));
+  console.log(document);
+})  
+
+app.get('/api/products-category/:category', async(req, res)=>{
+  console.log(req.params.category);
+  const document = await collection.find({ category : req.params.category }).toArray();
+  res.json(document);
+})
+
+app.get('/api/find-product/:id', async(req, res)=>{
+  const document = await collection.find({ _id : new mongodb.ObjectId(req.params.id)}).toArray();
+  res.json(document);
+})
+
 
 
 

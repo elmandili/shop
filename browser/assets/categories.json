@@ -2,28 +2,57 @@
     "data":
     [
         {
-          "categoryName": "men-clothes",
-          "type": "clothes",
-          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4wy5eLbxCrwQI-Cn_HZU9Thf9508kxTpC-BHavMWPQ&s"
+          "categoryName": "Men's Clothing",
+          
+          "imageUrl": "https://i.ibb.co/Zm6382z/Mens-Clothing.jpg"
         },
     
         {
-          "categoryName": "women-clothes",
-          "type": "clothes",
-          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4wy5eLbxCrwQI-Cn_HZU9Thf9508kxTpC-BHavMWPQ&s"
+          "categoryName": "Women's Clothing",
+          
+          "imageUrl": "https://i.ibb.co/ZS6GTyQ/Gemini-Generated-Image-1yyr9s1yyr9s1yyr.jpg"
         },
     
         {
-          "categoryName": "kids-clothes",
-          "type": "clothes",
-          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4wy5eLbxCrwQI-Cn_HZU9Thf9508kxTpC-BHavMWPQ&s"
+          "categoryName": "Children’s Clothing",
+          
+          "imageUrl": "https://i.ibb.co/Hrm060P/Gemini-Generated-Image-pquq7npquq7npquq.jpg"
 
         },
 
         {
-            "categoryName": "shoes",
-            "type": "clothes",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4wy5eLbxCrwQI-Cn_HZU9Thf9508kxTpC-BHavMWPQ&s"
+            "categoryName": "Accessories",
+            
+            "imageUrl": "https://i.ibb.co/vvF7L20/Gemini-Generated-Image-magqwwmagqwwmagq.jpg"
+        },
+        
+        {
+            "categoryName": "Home Décor",
+            
+            "imageUrl": "https://i.ibb.co/wgd7XPP/Gemini-Generated-Image-3z3w9u3z3w9u3z3w.jpg"
+        },
+        
+        
+        
+        
+        {
+            "categoryName": "Fitness Equipment",
+            
+            "imageUrl": "https://i.ibb.co/XVRCgYb/Gemini-Generated-Image-vgjmfwvgjmfwvgjm.jpg"
+        },
+        {
+            "categoryName": "Sportswear",
+            
+            "imageUrl": "https://i.ibb.co/YfMqcbK/Gemini-Generated-Image-ojccojccojccojcc.jpg"
+        },
+        
+       
+       
+        
+        {
+            "categoryName": "Car Accessories",
+            
+            "imageUrl": "https://i.ibb.co/4SPkNqX/Gemini-Generated-Image-m1v8umm1v8umm1v8-1.jpg"
         }
       ]
 }

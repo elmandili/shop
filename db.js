@@ -1,12 +1,24 @@
-const mongoose = require('mongoose');
+// Import the default export from the openai module
+import OpenAI from 'openai';
 
-const connectionString = 'mongodb+srv://elmandilimail:elmandili2004@cluster0.ilqpr9n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your MongoDB connection string
+// Initialize the OpenAI API client with configuration
+const openai = new OpenAI({
+    organization: 'org-gzOFtIzqZvjxmSuRp9xbIJv6',
+    apiKey: 'sk-proj-1z8fj9URpmCSp0sq7dyJT3BlbkFJfhUfu9zOQwAe1YdK9elF',
+});
 
-mongoose.connect(connectionString, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('Connected to MongoDB!'))
-.catch(err => console.error(err));
+// Define an async function to get the chat completion
+async function getCompletion() {
+    try {
+        const completion = await openai.createChatCompletion({
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: 'user', content: 'Hello' }],
+        });
+        console.log(completion.data.choices[0].message);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
 
-module.exports = mongoose;
+// Call the function
+getCompletion();
