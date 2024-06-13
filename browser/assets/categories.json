@@ -1,59 +1,73 @@
 {
     "data":
     [
-        {
-          "categoryName": "Men's Clothing",
-          
-          "imageUrl": "https://i.ibb.co/Zm6382z/Mens-Clothing.jpg"
-        },
-    
-        {
-          "categoryName": "Women's Clothing",
-          
-          "imageUrl": "https://i.ibb.co/ZS6GTyQ/Gemini-Generated-Image-1yyr9s1yyr9s1yyr.jpg"
-        },
-    
-        {
-          "categoryName": "Children’s Clothing",
-          
-          "imageUrl": "https://i.ibb.co/Hrm060P/Gemini-Generated-Image-pquq7npquq7npquq.jpg"
+      {
+        "categoryName": "Palestine",
+        
+        "imageUrl": "data:image/jpeg;base64,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"
+      },
 
-        },
+      {
+        "categoryName": "Men's Clothing",
+        
+        "imageUrl": "https://i.ibb.co/Zm6382z/Mens-Clothing.jpg"
+      },
+    
+      {
+        "categoryName": "Women's Clothing",
+        
+        "imageUrl": "https://i.ibb.co/ZS6GTyQ/Gemini-Generated-Image-1yyr9s1yyr9s1yyr.jpg"
+      },
+  
+      {
+        "categoryName": "Children’s Clothing",
+        
+        "imageUrl": "https://i.ibb.co/Hrm060P/Gemini-Generated-Image-pquq7npquq7npquq.jpg"
 
-        {
-            "categoryName": "Accessories",
-            
-            "imageUrl": "https://i.ibb.co/vvF7L20/Gemini-Generated-Image-magqwwmagqwwmagq.jpg"
-        },
+      },
+
+      {
+          "categoryName": "Accessories",
+          
+          "imageUrl": "https://i.ibb.co/vvF7L20/Gemini-Generated-Image-magqwwmagqwwmagq.jpg"
+      },
+      
+      {
+          "categoryName": "Home Décor",
+          
+          "imageUrl": "https://i.ibb.co/wgd7XPP/Gemini-Generated-Image-3z3w9u3z3w9u3z3w.jpg"
+      },
+      
+      
+      
+      
+      {
+          "categoryName": "Fitness Equipment",
+          
+          "imageUrl": "https://i.ibb.co/XVRCgYb/Gemini-Generated-Image-vgjmfwvgjmfwvgjm.jpg"
+      },
+      {
+          "categoryName": "Sportswear",
+          
+          "imageUrl": "https://i.ibb.co/YfMqcbK/Gemini-Generated-Image-ojccojccojccojcc.jpg"
+      },
+      
+      
+      
+      
+      {
+          "categoryName": "Car Accessories",
+          
+          "imageUrl": "https://i.ibb.co/4SPkNqX/Gemini-Generated-Image-m1v8umm1v8umm1v8-1.jpg"
+      },
+
+      {
+        "categoryName": "Electronics",
         
-        {
-            "categoryName": "Home Décor",
-            
-            "imageUrl": "https://i.ibb.co/wgd7XPP/Gemini-Generated-Image-3z3w9u3z3w9u3z3w.jpg"
-        },
+        "imageUrl": "https://i.ibb.co/0V4J1zn/Gemini-Generated-Image-l5icnl5icnl5icnl.jpg"
+      }
         
         
-        
-        
-        {
-            "categoryName": "Fitness Equipment",
-            
-            "imageUrl": "https://i.ibb.co/XVRCgYb/Gemini-Generated-Image-vgjmfwvgjmfwvgjm.jpg"
-        },
-        {
-            "categoryName": "Sportswear",
-            
-            "imageUrl": "https://i.ibb.co/YfMqcbK/Gemini-Generated-Image-ojccojccojccojcc.jpg"
-        },
-        
-       
-       
-        
-        {
-            "categoryName": "Car Accessories",
-            
-            "imageUrl": "https://i.ibb.co/4SPkNqX/Gemini-Generated-Image-m1v8umm1v8umm1v8-1.jpg"
-        }
       ]
 }
 
