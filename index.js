@@ -67,7 +67,8 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.use(cors());
+app.use(cors({ origin: 'https://www.commandi.online' }));
+app.use(cors({}))
 
 //new modification
 
