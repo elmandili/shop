@@ -341,9 +341,9 @@ app.post('api/add-product/',multer().none(), (req,res)=>{
 
 
   
-const environment = process.env.ENVIRONMENT || 'sandbox';
-const client_id = process.env.CLIENT_ID;
-const client_secret = process.env.CLIENT_SECRET;
+const environment = "production";
+const client_id = "AYp-OX6Pd4JDJ4p2zlbXXQPX5TL7Of3dvW06rVG-JK3JYe0MvQvgSYhKZa6FcK0fdvBHvsgCITSHGmt7";
+const client_secret = "EH_volEqEgVvSxD3iS6t20XJpY-iBdtQ6l0PFllVnFBCf9lbQD43jwXd56E-cZUfKsAER4FM_g5m3z2d";
 const endpoint_url = environment === 'sandbox' ? 'https://api-m.sandbox.paypal.com' : 'https://api-m.paypal.com';
 
 /**
