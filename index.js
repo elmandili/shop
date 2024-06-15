@@ -342,8 +342,8 @@ app.post('api/add-product/',multer().none(), (req,res)=>{
 
   
 const environment = "production";
-const client_id = "AdzKRKt1Vc1J9WyQVR2WRyJgiAxx7nlysDiBvcU2muK_jlD2YKK0Fj0x5zrr9zxspki84ag0IsuXNDrc";
-const client_secret = "EGXcmjdfuCpm6Gb7loK3857Xq7JxbhHOTQHAu8GgpjGjuS38BoXI2lsnY8_R9ZfbtV9oAaxu5SO8DzBH";
+const client_id = "AYp-OX6Pd4JDJ4p2zlbXXQPX5TL7Of3dvW06rVG-JK3JYe0MvQvgSYhKZa6FcK0fdvBHvsgCITSHGmt7";
+const client_secret = "EH_volEqEgVvSxD3iS6t20XJpY-iBdtQ6l0PFllVnFBCf9lbQD43jwXd56E-cZUfKsAER4FM_g5m3z2d";
 const endpoint_url = 'https://api-m.paypal.com';
 
 /**
