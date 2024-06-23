@@ -173,7 +173,7 @@ app.delete('/api/delete-order/:id', async (req,res)=>{
 app.get('/api/find-user/:username', async(req, res)=>{
   try
   {
-    const document = await registeredUsers.find({"email" : req.params.username}).toArray() ;
+    const document = await registeredUsers.find({"phone_number" : req.params.username}).toArray() ;
     console.log(document);
     
     await res.json(document);
