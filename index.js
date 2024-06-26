@@ -185,9 +185,10 @@ app.get('/api/find-user/:username', async(req, res)=>{
   }
 })
 
-app.get('/api/find-user-by-id/:id', async(req, res) => {
+app.get('/api/find-user-by-id/:id/', async(req, res) => {
   const document = await registeredUsers.find({ _id: new mongodb.ObjectId(req.params.id) }).toArray();
   res.send(document);
+  
 })
 
 app.get('/api/search/:product_name', async(req,res) =>{
