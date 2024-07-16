@@ -104,7 +104,7 @@ app.post('/api/place-order', async(req, res) => {
 
 app.post('/api/register', async(req, res)=> {
   const result = await registeredUsers.insertOne(req.body);
-  res.json("sent for review");
+  res.json("thanks for your registration, we will confirm your informations soon!");
 })
 
 app.get('/api/get-orders', async(req, res) => {
@@ -161,6 +161,22 @@ app.get('/api/update/order-comments/:id/:comments/:statue', (req,res)=>{
   orders.updateOne({_id: new mongodb.ObjectId(req.params.id)},{ $set: {last_update_date: now}});
   orders.updateOne({_id: new mongodb.ObjectId(req.params.id)},{ $set: {statue: req.params.statue}});
   res.send('comments : ' + req.params.comments + ' id : ' + req.params.id + 'date : ' + now);
+})
+
+app.get('/api/update-product/:id/:obj', async (req,res) =>{
+  console.log('ready to update');
+  let decoded = decodeURIComponent(req.params.obj);
+  let obj = JSON.parse(decoded);
+  let name = obj.productName;
+  console.log(name);
+  await collection.updateOne({_id: new mongodb.ObjectId(req.params.id)}, { $set: {productName: name}})
+  await collection.updateOne({_id: new mongodb.ObjectId(req.params.id)}, { $set: {category: obj.category}})
+  await collection.updateOne({_id: new mongodb.ObjectId(req.params.id)}, { $set: {specification: obj.specification}})
+  await collection.updateOne({_id: new mongodb.ObjectId(req.params.id)}, { $set: {productImageUrls: obj.productImageUrls}})
+  await collection.updateOne({_id: new mongodb.ObjectId(req.params.id)}, { $set: {productPrice: obj.productPrice}})
+  await collection.updateOne({_id: new mongodb.ObjectId(req.params.id)}, { $set: {productDescription: obj.productDescription}})
+ 
+  res.send(obj);
 })
 
 app.delete('/api/delete-order/:id', async (req,res)=>{
